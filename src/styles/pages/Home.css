@@ -1,0 +1,159 @@
+.home-container {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  background-image: url('../../assests/bg4.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.home-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.815); 
+  z-index: -1; 
+  filter: blur(5px) brightness(0.8); 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: inherit; 
+  background-size: inherit;
+  background-position: inherit;
+  z-index: -2;
+}
+
+.home-container .background-effect {
+  filter: blur(5px) brightness(0.8); 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: inherit; 
+  background-size: inherit;
+  background-position: inherit;
+  z-index: -2; 
+}
+
+.content {
+  text-align: center;
+  max-width: 800px;
+}
+
+.title {
+  margin-top: 10rem;
+  font-size: 3.5rem;
+  margin-bottom: 4rem;
+  font-weight: bold;
+  
+}
+.hero-highlight {
+  color: #652D90;
+}
+
+.subtitle {
+  border: 1px solid #2a2a2a;
+
+  
+
+  margin-top: 1.5rem;
+  font-size: 1.125rem;
+  line-height: 2rem;
+  color: white;
+  padding: 1.25rem;
+  border-radius: 0.375rem;
+}
+
+.subtitle span {
+  background-color: rgba(255, 255, 255, 0.1);
+
+  padding: 0.5rem;
+    margin: 0.25rem;
+    border-radius: 0.375rem;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  margin-top: 4rem;
+}
+
+.cta-button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.our-works {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+.contact-us {
+  background: linear-gradient(90deg, #652D90 0%, #502B86 50%, #3A297B 100%);
+  color: white;
+}
+.contact-us:hover{
+  background: linear-gradient(90deg, #3A297B 0%, #502B86 50%, #652D90 100%);
+
+}
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+
+
+
+@media (max-width: 940px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .company-logos {
+    gap: 1rem;
+  }
+
+  .company-logos svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+
+}

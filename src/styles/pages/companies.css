@@ -1,0 +1,50 @@
+.companies-container {
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+   
+    color: white;
+    padding: 2rem;
+   
+  }
+  .trusted-by {
+    border: 1px solid #2a2a2ad2;
+    padding: 1.25rem;
+    border-radius: 5rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    opacity: 0.7;
+  }
+  
+  /* In your Home.css file */
+  .company-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .company-logos svg {
+    color: white;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+  
+  .company-logos svg:hover {
+    opacity: 1;
+  }
+  @media (max-width: 768px) {
+    
+  
+    .company-logos {
+      gap: 1rem;
+    }
+  
+    .company-logos svg {
+      width: 20px;
+      height: 20px;
+    }
+  }

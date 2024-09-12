@@ -1,0 +1,211 @@
+.contact-form-section {
+    margin-top: 7rem;
+    background-color: #000;
+    color: #fff;
+    padding: 0;
+  }
+  
+  .contact-form-header {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .contact-form-section .logo {
+    font-size: 2rem;
+    color: #652D90;
+    margin-bottom: 1rem;
+    height: 30px;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    opacity: 0.8;
+    margin-bottom: 2rem;
+  }
+  
+  .start-project-btn {
+    background: linear-gradient(90deg, #652D90 0%, #502B86 50%, #3A297B 100%);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 0.3rem;
+  }
+  .start-project-btn:hover {
+    background: linear-gradient(90deg, #3A297B 0%, #502B86 50%, #652D90 100%);
+  }
+  
+  .contact-form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .form-group {
+    flex: 1;
+    margin-bottom: 1.5rem;
+    background-color: #111;
+    padding: 1rem;
+    border-radius: 4px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #333;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+  }
+  
+  input[type="text"]::placeholder,
+  input[type="email"]::placeholder,
+  textarea::placeholder {
+    color: #555;
+  }
+  
+  .contact-reason .checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+   
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 0.5rem;
+   
+  }
+  
+  input[type="range"] {
+    width: 100%;
+    margin-top: 0.5rem;
+    -webkit-appearance: none;
+    background: #333;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #652D90 ;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
+  input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #652D90 ;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
+  .budget-range {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    opacity: 0.8;
+    margin-top: 0.5rem;
+  }
+
+  .slider-container {
+    position: relative;
+    padding-top: 20px; /* Make room for the value above the slider */
+  }
+  
+  .slider-value {
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    background-color: #652D90;
+    color: white;
+    padding: 2px 6px;
+    margin-left: 1rem;
+    border-radius: 3px;
+    font-size: 12px;
+  }
+  
+  input[type="range"] {
+    width: 100%;
+    margin-top: 0.5rem;
+    -webkit-appearance: none;
+    background: #333;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #652D90;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
+  input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #652D90;
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
+  .submit-btn {
+    background: linear-gradient(90deg, #652D90 0%, #502B86 50%, #3A297B 100%);
+    color: white;
+    border: none;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 0.3rem;
+  }
+  .submit-btn:hover {
+    background: linear-gradient(90deg, #3A297B 0%, #502B86 50%, #652D90 100%);
+  }
+  
+  @media (max-width: 768px) {
+    .form-row {
+      flex-direction: column;
+    }
+  
+    .contact-form-header {
+      padding: 2rem 1rem;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    .contact-reason .checkbox-group {
+      grid-template-columns: 1fr;
+    }
+  }

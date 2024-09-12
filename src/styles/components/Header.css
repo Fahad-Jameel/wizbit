@@ -1,0 +1,107 @@
+/* styles/components/Header.css */
+.header {
+
+  background-color: black;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #2a2a2a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-content {
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-content .logo {
+  margin-left: 4.5rem;
+  height: 30px;
+}
+
+.nav {
+  display: flex;
+}
+
+
+
+.nav-link {
+  /* margin-right: 1.25rem;  */
+  padding-left: 1.5rem; /* Equivalent to px-6 */
+  padding-right: 1.5rem; /* Equivalent to px-6 */
+  padding-top: 0.5rem; /* Equivalent to py-2 */
+  padding-bottom: 0.5rem; /* Equivalent to py-2 */
+  border-radius: 0.25rem; /* Equivalent to rounded */
+  cursor: pointer;
+  color: white;
+  transition: background-color 300ms ease-in-out 150ms; /* Equivalent to transition delay-150 duration-300 ease-in-out */
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  background-color: #262626; /* Equivalent to hover:bg-[#262626] */
+}
+
+.contact-us-button {
+  background: linear-gradient(90deg, #652D90 0%, #502B86 50%, #3A297B 100%);
+  border: none;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  margin-left: 1.5rem;
+  margin-right: 4.5rem;
+}
+
+
+.contact-us-button:hover {
+  background: linear-gradient(90deg, #3A297B 0%, #502B86 50%, #652D90 100%);
+}
+
+
+.hamburger-button {
+  display: none;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 940px) {
+  .header-content .logo{
+    margin-left: 0rem;
+  }
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #121212;
+    border-top: 1px solid #2a2a2a;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav.nav-open {
+    display: flex;
+  }
+
+  .nav-link {
+    padding: 1rem;
+  }
+
+  .hamburger-button {
+    display: block;
+  }
+
+  .contact-us-button {
+    display: none;
+  }
+}

@@ -1,0 +1,159 @@
+/* styles/components/Services.css */
+.services-section {
+    background-color: black;
+    padding: 4rem 0rem;
+    color: white;
+    margin-bottom: 4rem;
+  }
+  
+  .image-content {
+    background-image: url('../../assests/bg4.jpg');
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #2a2a2a5e;
+    margin-bottom: 4rem;
+    padding: 0rem 2rem;
+  }
+  
+  .image-content h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .services-content {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  .services-subtitle {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    opacity: 0.8;
+  }
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 5rem; /* Increased gap between grid items */
+  }
+  
+  .service-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 0.9rem;
+    height: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added shadow for better separation */
+  }
+  
+  .service-icon {
+    font-size: 2.5rem; /* Increased icon size */
+    color: #652D90;
+    margin-bottom: 1.5rem; /* Increased bottom margin */
+  }
+  
+  .service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .description {
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+  }
+  
+  .description-truncated {
+    display: none;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+  }
+  
+  .learn-more {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem; /* Increased button padding */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem; /* Increased font size */
+  }
+  
+  .learn-more:hover {
+    background-color: #444;
+  }
+  
+  @media (max-width: 1200px) {
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 5.5rem; /* Adjusted gap for tablet view */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .services-content h2,
+    .image-content h2 {
+      font-size: 2rem;
+    }
+  
+    .services-subtitle {
+      font-size: 0.9rem;
+    }
+  
+    .services-grid {
+      grid-template-columns: 1fr;
+      gap: 5rem; /* Adjusted gap for mobile view */
+    }
+  
+    .service-card {
+      font-size: 0.8rem;
+      padding: 1.5rem; /* Reduced padding for mobile */
+    }
+  
+    .service-card h3 {
+      font-size: 1.2rem;
+    }
+  
+    .service-icon {
+      font-size: 2rem; /* Adjusted icon size for mobile */
+    }
+  
+    .description {
+      display: none;
+    }
+  
+    .description-truncated {
+      display: block;
+    }
+  
+    .learn-more {
+      padding: 0.5rem 1rem; /* Adjusted button padding for mobile */
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .services-content h2,
+    .image-content h2 {
+      font-size: 1.5rem;
+    }
+  
+    .image-content {
+      padding: 2rem 1rem;
+    }
+  
+    .services-content {
+      padding: 0 1rem;
+    }
+  
+    .services-grid {
+      gap: 5rem; /* Further reduced gap for smaller mobile devices */
+    }
+  }

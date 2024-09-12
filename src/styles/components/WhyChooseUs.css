@@ -1,0 +1,121 @@
+/* styles/components/WhyChooseUs.css */
+.why-choose-section {
+    background-color: black;
+    padding: 4rem 0;
+    color: white;
+  }
+  
+  .image-content {
+    background-image: url('../../assests/bg4.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 2rem;
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  
+  .image-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .choose-subtitle {
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.8;
+  }
+  
+  .choose-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  .choose-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+  
+  .choose-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+  }
+  
+  .choose-icon {
+    font-size: 2.5rem;
+    color: #652D90;
+    margin-bottom: 1rem;
+  }
+  
+  .choose-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #652D90;
+  }
+  
+  .choose-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  
+  @media (max-width: 1024px) {
+    .choose-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .image-content {
+      padding: 3rem 1rem;
+    }
+  
+    .image-content h2 {
+      font-size: 2rem;
+    }
+  
+    .choose-subtitle {
+      font-size: 0.9rem;
+    }
+  
+    .choose-content {
+      padding: 0 1rem;
+    }
+  
+    .choose-card {
+      padding: 1.5rem;
+    }
+  
+    .choose-icon {
+      font-size: 2rem;
+    }
+  
+    .choose-card h3 {
+      font-size: 1.2rem;
+    }
+  
+    .choose-card p {
+      font-size: 0.8rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .image-content h2 {
+      font-size: 1.5rem;
+    }
+  
+    .choose-subtitle {
+      font-size: 0.8rem;
+    }
+  
+    .choose-grid {
+      gap: 1.5rem;
+    }
+  
+    .choose-card {
+      padding: 1rem;
+    }
+  }

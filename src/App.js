@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React , { useRef }from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import './styles/Global.css';
+import './App.css'
+// import Companies from './pages/companies';
+// import Services from './components/ServiceCard';
+// import WhyChooseUs from './components/whychooseus';
+// import Testimonials from './components/Testimonial';
+// import ContactPage from './components/contact';
 
 function App() {
+    // Create a ref for the last component
+    const lastComponentRef = useRef(null);
+
+    // Scroll function
+    const scrollToLastComponent = () => {
+      lastComponentRef.current.scrollIntoView({ behavior: 'smooth' });
+    };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+      {/* <Companies/>
+      <Services/>
+      <WhyChooseUs/>
+      <Testimonials/>
+      <ContactPage  ref={lastComponentRef} /> */}
+       <Footer /> 
+    </Router>
   );
 }
 
