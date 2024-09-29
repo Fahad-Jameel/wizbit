@@ -22,6 +22,9 @@ const DynamicBackground = () => {
       
       const shape = shapes[Math.floor(Math.random() * shapes.length)];
       obj.classList.add(shape);
+
+      // Apply blur effect to the object
+      obj.style.filter = `blur(${Math.random() * 3 + 1}px)`; // Blur effect from 1px to 4px
       
       const startPositionX = Math.random() * container.offsetWidth;
       const startPositionY = Math.random() * container.offsetHeight;
@@ -49,7 +52,7 @@ const DynamicBackground = () => {
       });
     };
 
-    const numberOfObjects = 300; // Increased from 100 to 300
+    const numberOfObjects = 300;
     const objects = Array.from({ length: numberOfObjects }, createObject);
     objects.forEach(animateObject);
 

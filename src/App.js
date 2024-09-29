@@ -11,28 +11,26 @@ import ServicesPage from './pages/services';
 // import Services from './components/ServiceCard';
 // import WhyChooseUs from './components/whychooseus';
 // import Testimonials from './components/Testimonial';
-// import ContactPage from './components/contact';
+ import ContactPage from './components/contact';
+import AboutUs from './pages/Aboutus';
 
 function App() {
-    // Create a ref for the last component
-    const lastComponentRef = useRef(null);
-
-    // Scroll function
-    const scrollToLastComponent = () => {
-      lastComponentRef.current.scrollIntoView({ behavior: 'smooth' });
-    };
+   
+  
   return (
     <Router>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<ServicesPage />} />
+        <Route  path="/contactus" element={<ContactPage />} /> 
+        <Route  path="/About-us" element={<AboutUs />} /> 
       </Routes>
       {/* <Companies/>
       <Services/>
       <WhyChooseUs/>
       <Testimonials/>
-      <ContactPage  ref={lastComponentRef} /> */}
+       */}
        <Footer /> 
     </Router>
   );

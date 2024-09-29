@@ -95,6 +95,12 @@
   background: inherit;
   filter: blur(10px);
   z-index: -1;
+
+
+
+
+
+  
 }
 
 .serviceCard::after {

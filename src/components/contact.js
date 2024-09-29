@@ -3,7 +3,7 @@ import '../styles/components/ContactPage.css';
 import backgroundImage from '../assests/bg4.jpg';
 import logo from '../assests/logo.svg';
 
-const ContactForm = forwardRef((props, ref) => {
+const ContactForm = () => {
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -36,7 +36,7 @@ const ContactForm = forwardRef((props, ref) => {
   };
 
   return (
-    <section ref={ref} className="contact-form-section">
+    <section className="contact-form-section">
       <div 
         className="contact-form-header"
        
@@ -157,6 +157,6 @@ const ContactForm = forwardRef((props, ref) => {
       </form>
     </section>
   );
-});
+};
 
 export default ContactForm;

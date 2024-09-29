@@ -187,7 +187,11 @@
     cursor: pointer;
     width: 100%;
     border-radius: 0.3rem;
-  }
+    -webkit-border-radius: 0.3rem;
+    -moz-border-radius: 0.3rem;
+    -ms-border-radius: 0.3rem;
+    -o-border-radius: 0.3rem;
+}
   .submit-btn:hover {
     background: linear-gradient(90deg, #3A297B 0%, #502B86 50%, #652D90 100%);
   }
