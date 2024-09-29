@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   
-  background-image: url('../../assests/bg4.jpg');
+  /* background-image: url('../../assests/bg4.jpg'); */
   background-size: cover;
   background-position: center;
   color: white;
@@ -12,6 +12,47 @@
   position: relative;
   z-index: 1;
 }
+
+.floating-dot {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.home-section {
+  position: relative;
+}
+
+.floating-object {
+  position: absolute;
+  opacity: 0.9; /* Reduced opacity to prevent overwhelming the content */
+  pointer-events: none;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.square {
+  border-radius: 3px;
+}
+
+.triangle {
+  width: 0 !important;
+  height: 0 !important;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 17px solid;
+  background-color: transparent !important;
+}
+
+.diamond {
+  transform: rotate(45deg);
+}
+
+
+
 
 .home-container::before {
   content: '';

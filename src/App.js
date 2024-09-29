@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import './styles/Global.css';
 import './App.css'
+import ServicesPage from './pages/services';
 // import Companies from './pages/companies';
 // import Services from './components/ServiceCard';
 // import WhyChooseUs from './components/whychooseus';
@@ -25,6 +26,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/services" element={<ServicesPage />} />
       </Routes>
       {/* <Companies/>
       <Services/>

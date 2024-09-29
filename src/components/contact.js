@@ -1,4 +1,4 @@
-import React, { useState ,  forwardRef , useRef   } from 'react';
+import React, { useState ,  forwardRef   } from 'react';
 import '../styles/components/ContactPage.css';
 import backgroundImage from '../assests/bg4.jpg';
 import logo from '../assests/logo.svg';
@@ -139,7 +139,7 @@ const ContactForm = forwardRef((props, ref) => {
     </div>
   </div>
   <div className="budget-range">
-    <span>$0</span>
+    <span>$50</span>
     <span>$5000</span>
   </div>
 </div>
