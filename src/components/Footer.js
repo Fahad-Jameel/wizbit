@@ -12,21 +12,21 @@ const Footer = () => {
                 </div>
                 <nav className="footer-nav">
                     <a href="/">Home</a>
-                    <a href="/">Services</a>
-                    <a href="/">Work</a>
-                    <a href="/">Process</a>
-                    <a href="/">About</a>
-                    <a href="/">Careers</a>
-                    <a href="/">Contact</a>
+                    <a href="/services">Services</a>
+                    {/* <a href="/">Work</a> */}
+                    
+                    <a href="/About-us">About</a>
+                    {/* <a href="/">Careers</a> */}
+                    <a href="/contactus">Contact</a>
                 </nav>
                 
                 <div className="footer-social">
                     <span>Stay Connected</span>
                     <div className="social-icons">
-                        <a href="/" className="social-icon"><FaFacebookF /></a>
-                        <a href="/" className="social-icon"><FaTwitter /></a>
-                        <a href="/" className="social-icon"><FaLinkedinIn /></a>
-                        <a href="/" className="social-icon"><FaInstagram /></a>
+                        <a href="https://www.facebook.com/WizBitOfficial" className="social-icon"><FaFacebookF /></a>
+                        
+                        <a href="https://www.linkedin.com/company/wizbit-official/" className="social-icon"><FaLinkedinIn /></a>
+                        <a href="https://www.instagram.com/wizbit_official/" className="social-icon"><FaInstagram /></a>
                     </div>
                 </div>
             </div>
@@ -34,7 +34,7 @@ const Footer = () => {
             <div className="footer-contact">
                     <div className="contact-item">
                         <FaEnvelope className="icon" />
-                        <a href="mailto:Contactwizbit@gmail.com">Contactwizbit@gmail.com</a>
+                        <a href="mailto:hellowizbit@gmail.com">hellowizbit@gmail.com</a>
                     </div>
                     <div className="contact-item">
                         <FaPhone className="icon" />

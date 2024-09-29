@@ -4,11 +4,18 @@ import { PiRobotDuotone } from "react-icons/pi";
 import { GrGamepad } from "react-icons/gr";
 import { TbDeviceMobileCode } from "react-icons/tb";
 import '../styles/components/Services.css';
-
+import { Link } from 'react-router-dom';
+import { to } from 'react-spring';
+import { useNavigate } from 'react-router-dom';
 const ServiceCard = ({ icon, title, description }) => {
   const truncateDescription = (text, maxLength) => {
     if (text.length <= maxLength) return text;
     return text.slice(0, maxLength) + '...';
+  };
+  const navigate = useNavigate();
+
+  const handleLearn = () => {
+    navigate('/services'); 
   };
 
   return (
@@ -20,7 +27,7 @@ const ServiceCard = ({ icon, title, description }) => {
       <h3>{title}</h3>
       <p className="description">{description}</p>
       <p className="description-truncated">{truncateDescription(description, 100)}</p>
-      <button
+      <button  onClick={handleLearn}
         className="learn-more"
        
       >

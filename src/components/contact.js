@@ -4,6 +4,53 @@ import backgroundImage from '../assests/bg4.jpg';
 import logo from '../assests/logo.svg';
 
 const ContactForm = () => {
+  const [showPopup, setShowPopup] = useState(false);
+  const SubmissionPopup = ({ onClose }) => (
+    <div className="submission-popup">
+      <div className="popup-content">
+        <div className="tick-icon">✓</div>
+        <p>Your response has been submitted</p>
+        <button onClick={onClose}>Close</button>
+      </div>
+    </div>
+  );
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+  
+    formData.append("access_key", "e8c7e519-573d-47e8-b94e-d8cfec7aeb46");
+  
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+  
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: json
+      }).then((res) => res.json());
+  
+      if (res.success) {
+        console.log("Success", res);
+        setShowPopup(true);
+        // Reset form fields here if needed
+        setFormData({
+          fullName: '',
+          email: '',
+          contactReason: [],
+          budget: 3000,
+          message: ''
+        });
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    }
+  };
+
+
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -30,10 +77,7 @@ const ContactForm = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
-  };
+  
 
   return (
     <section className="contact-form-section">
@@ -49,10 +93,10 @@ const ContactForm = () => {
         <p>We would love to hear from you and discuss how we can help bring your digital ideas to life. Here are the different ways you can get in touch with us.</p>
         <button className="start-project-btn">Start Project</button>
       </div>
-      <form 
+      <form  onSubmit={onSubmit}
         className="contact-form"
        
-        onSubmit={handleSubmit}
+       
       >
         <div className="form-row">
           <div className="form-group">
@@ -154,8 +198,12 @@ const ContactForm = () => {
           ></textarea>
         </div>
         <button type="submit" className="submit-btn">Submit</button>
+
       </form>
+      {showPopup && <SubmissionPopup onClose={() => setShowPopup(false)} />}
+      
     </section>
+    
   );
 };
 
